@@ -363,6 +363,7 @@ bool CSourcePauseTool::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceF
 	Hooks::AddToHookedModules(&engineDLL);
 	Hooks::AddToHookedModules(&clientDLL);
 	Hooks::AddToHookedModules(&serverDLL);
+	Hooks::AddToHookedModules(&vstdlibDLL);
 #ifndef OE
 	Hooks::AddToHookedModules(&vgui_matsurfaceDLL);
 #endif

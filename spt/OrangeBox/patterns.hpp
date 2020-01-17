@@ -443,4 +443,14 @@ namespace patterns
 		    "56 6A 00 E8 ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 8B 01 8B ?? ?? ?? ?? ?? 83 C4 04 FF D2 8B F0 85 F6 74 09 8B 06 8B 50 08 8B CE FF D2");
 	} // namespace vguimatsurface
 
+	namespace vstdlib
+	{
+		PATTERNS(CUniformRandomStream__SetSeed,
+			"4104",
+			"56 57 8B F9 8D B7 8C 00 00 00 FF 15 04 90 ?? ?? 8B C8 8B 06 3B C8 74 10 53 8B D1 8B DE 33 C0 F0 0F B1 13 85 C0 5B 75 06");
+		PATTERNS(CUniformRandomStream__GenerateRandomNumber, "4104", "53 55 56 8B F1 57 8D AE 8C 00 00 00 FF 15 04 90 ?? ?? 8B C8 8B 45 00 3B C8 BF 01 00 00 00 74 0E 8B D1 8B DD 33 C0 F0 0F B1 13 85 C0");
+		PATTERNS(CUniformRandomStream__RandomFloat, "4104", "51 E8 9A FD FF FF 89 04 24 DB 04 24 DC 0D 30 9F ?? ?? DC 15 28 9F ?? ?? DF E0 F6 C4 41 75 08 DD D8 D9 05 20 9F ?? ?? D9 44 24 0C D9 44 24 08 DC");
+
+	} // namespace vstdlib
+
 } // namespace patterns

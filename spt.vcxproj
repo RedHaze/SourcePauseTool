@@ -80,7 +80,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug P2|Win32'" Label="Configuration">
@@ -293,7 +293,7 @@
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\..\lib\common;..\..\lib\public;lib\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>lib\Debug;..\..\lib\common;..\..\lib\public;lib\Release</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc;libcd;libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -1351,6 +1351,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release BMS|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug blank|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="spt\OrangeBox\modules\VstdlibDLL.cpp" />
     <ClCompile Include="spt\OrangeBox\module_hooks.cpp" />
     <ClCompile Include="spt\utils\ent_utils.cpp" />
     <ClCompile Include="spt\utils\patterncontainer.cpp" />
@@ -1749,6 +1750,7 @@
     <ClInclude Include="SPTLib\patterns.hpp" />
     <ClInclude Include="SPTLib\patterns_macros.hpp" />
     <ClInclude Include="SPTLib\Windows\DetoursUtils.hpp" />
+    <ClInclude Include="spt\OrangeBox\modules\VstdlibDLL.hpp" />
     <ClInclude Include="spt\OrangeBox\module_hooks.hpp" />
     <ClInclude Include="spt\strafe_utils.hpp" />
     <ClInclude Include="spt\utils\ent_utils.hpp" />
